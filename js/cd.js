@@ -1,6 +1,14 @@
 function myTimer() {
+      var getTime = ($("#timer").attr("data-countdown-start"));
+    //console.log(getTime + new Date())
+      //var getTime = getTime.map(function (x) {
+      //  return parseInt(x, 10);
+    //  });
 
-			var endTime = new Date("01.01, 2017 23:59:59");
+
+
+
+      var endTime = new Date(getTime);
 			var endTime = (Date.parse(endTime)) / 1000;
 
 
