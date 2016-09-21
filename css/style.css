@@ -1,0 +1,51 @@
+/*css for all*/
+html {
+  font-family: Arial, sans-serif;
+  line-height: 1.15;
+
+}
+body {
+  background: #222;
+  margin: 0;
+}
+.main-page-container {
+  display: flex;
+  flex-direction: column;
+}
+.main-page-item {
+  background-color: #5ea1d4;
+  line-height: 70px;
+  margin:   5px 10px;
+  width: 160px;
+  height: 70px;
+  border: 1px solid black;
+  border-radius: 12px;
+
+}
+.main-page-item:hover{
+  background-color: #417094;
+}
+.main-page-item a {
+  margin: 5px;
+  text-align: center;
+  color: inherit;
+  text-decoration: none;
+}
+/*css for timer*/
+#timer {
+  color: #fff;
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+  font-size: 80px;
+}
+#days, #hours, #minutes, #seconds{
+  border: 1px dashed;
+  padding: 10px;
+  margin: 5px;
+}
+#timer span {
+ display: block;
+ font-size: 20px;
+ color: white;
+}
