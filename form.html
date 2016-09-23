@@ -2,9 +2,22 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
     <title>form jquery</title>
   </head>
   <body>
-
+    <div class="form-container">
+    <form class="form-valid-lul">
+      <h1>jQuery is cool</h1>
+      <input type="text" name="name" id="name" value="Name"/>
+      <input type="text" name="email" id="email" value="email"/>
+      <input name="date" id="date" value="date"/>
+      <input name ="ip" id="ip" value="ip" />
+      <input type="submit" name = "submit" id="submit" value="Send" />
+    </form>
+  <div id ="form-error-box"></div>
+    </div>
+    <script src="js/jquery-3.1.0.js"></script>
+    <script src="js/form_valid.js"></script>
   </body>
 </html>
