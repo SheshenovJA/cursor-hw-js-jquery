@@ -3,7 +3,7 @@ var ipPattern = /^\d+\.\d+\.\d+\.\d+$/;
 var datePattern = /^(0?[1-9]|[12][0-9]|3[01])[\/\-](0?[1-9]|1[012])[\/\-]\d{4}$/;// DD/MM/YYYY or DD-MM-YYYY
 var $ip = $("input[name='ip']");
 var $date = $("input[name='date']");
-var messageBox = $('#form-error-box');
+
 
 
 $('#submit').on('click', function() {
@@ -12,7 +12,7 @@ $('#submit').on('click', function() {
         $email = $('#email');
 
     if ($('#name').val() == '') {
-        errorMessage  += "please enter your name \n";
+        errorMessage  = "please enter your name \n";
         valid = false;
     }
     var nameLength = $("#name").val().length;
@@ -50,14 +50,16 @@ $('#submit').on('click', function() {
     }
     if($date.val() !== ""){
       if (!datePattern.test($date.val())){
-        errorMessage += "Please enter a correct date";
+        errorMessage += "Please enter a correct date in DD/MM/YYYY or DD-MM-YYYY formats";
         valid = false;
       }
     }
 
     if(!valid && errorMessage.length > 0){
-      alert(errorMessage);
-
-
+        alert(errorMessage);
     }
+    if (valid && errorMessage.length == 0){
+        alert('no errors! gz')
+    }
+
 });
